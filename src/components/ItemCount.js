@@ -3,7 +3,7 @@ import React from 'react'
 function ItemCount({items}) {
     return (
         <div>
-          items: {items.length}
+            Items: {items.length}
         </div>
     )
 }
