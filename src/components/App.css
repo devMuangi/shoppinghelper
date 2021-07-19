@@ -43,8 +43,16 @@
     transform: rotate(360deg);
   }
 }
+.items-container{
+  background-color: red;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+}
 .item-container{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }

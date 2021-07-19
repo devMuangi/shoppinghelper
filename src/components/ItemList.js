@@ -1,19 +1,27 @@
 import React, { useContext } from 'react';
 import ItemsContext from '../context/items-context';
 import Item from './Item';
+import Price from './Price'
 
 const ItemList = () => {
-  const { items } = useContext(ItemsContext);
+  const { items,prices} = useContext(ItemsContext);
 
   return (
     <div className="items-container">
-      <ul>
+      <div className="item-container">
         {items.map((item) => (
             <Item key={item} item={item} /> 
         ))}
-      </ul>
+        </div>
+        <div className="item-container">
+        {prices.map((price) => (
+            <Price key={price} price={price} /> 
+        ))}
+        </div>
     </div>
   );
 };
 
 export { ItemList as default };
+
+

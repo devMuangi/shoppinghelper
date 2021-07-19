@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import ItemsContext from '../context/items-context';
 
-const Item = ({ item }) => {
-  const { itemsDispatch } = useContext(ItemsContext);
+const Item = ({ item,price }) => {
+  const { itemsDispatch,pricesDispatch } = useContext(ItemsContext);
 
   return (
-    <div className="item-container">
+    <div >
       <span >{item}</span>
+      {/* <span >{price}</span> */}
       <button
         className="item__button"
         onClick={() =>
